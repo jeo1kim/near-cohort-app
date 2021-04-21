@@ -1,0 +1,22 @@
+{
+  "name": "scratch",
+  "version": "1.0.0",
+  "description": "near-twitter",
+  "main": "index.js",
+  "devDependencies": {
+    "near-sdk-as": "^3.1.0"
+  },
+  "scripts": {
+    "test": "asp",
+    "build": "asb"
+  },
+  "author": "John Kim",
+  "license": "MIT",
+  "dependencies": {
+    "asp": "^0.0.2",
+    "full": "^1.0.1",
+    "node-gyp": "^8.0.0",
+    "rust": "^0.1.6",
+    "wasm-pack": "^0.9.1"
+  }
+}
