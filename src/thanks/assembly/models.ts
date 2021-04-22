@@ -19,6 +19,25 @@ export class Message {
   }
 }
 
+@nearBindgen
+export class Post {
+
+  public static max_length(): i32 { return 100 as i32 };
+
+  public poster: AccountId
+  public fee: u128
+
+  constructor(
+    public text: string,
+    public contributionFee: u128 = u128.Zero
+  ) {
+    // when creating a post, poster pays per character.
+    this.fee = u128.fromI32(text.length) 
+
+    this.poster = Context.sender    
+  }
+}
+
 /**
  * Helper class to track contribution summary data
  */
